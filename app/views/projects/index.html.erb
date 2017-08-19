@@ -1,0 +1,36 @@
+<%= flash_message %>
+<div class="jumbotron">
+  <h1 class="display-3 text-center">Todas as nossas ações</h1> 
+</div>
+
+<div class="container">
+<table class="table table-striped">
+
+
+ <thead>
+	<tr>
+		<th>Nome</th>
+		<th>Descrição</th>
+		<th>Organizador</th>
+		<th>Lugar</th>
+		<th>Data Inicial</th>
+		<th>Data Final</th>
+		<th>Atividades</th>
+		<th>Contato do Organizador</th>
+	</tr>
+	</thead>
+
+	<% @projects.each do |p|  %>
+		<tr>
+			<td> <%= p.name %> </td>
+			<td> <%= p.description %> </td>
+			<td> <%= p.organizer %> </td>
+			<td> <%= p.place %> </td>
+			<td> <%= p.initial_date %> </td>
+			<td> <%= p.final_date %> </td>
+			<td> <%= p.activities %> </td>
+			<td> <%= p.organizer_contact %> </td>
+		</tr>
+	<% end %>
+	</table>
+</div>
